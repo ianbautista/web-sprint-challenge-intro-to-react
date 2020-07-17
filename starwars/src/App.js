@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import Character from "./components/Character";
+import { Button } from "./components/styledComponents";
 
 const App = () => {
 	// Try to think through what state you'll need for this app before starting. Then build out
@@ -77,8 +78,8 @@ const App = () => {
 					return <Character name={char.name} code={pokemonCode(char.url)} />;
 				})}
 			</div>
-			<button onClick={goBack}>{`<`}</button>
-			<button onClick={goNext}>{`>`}</button>
+			<Button onClick={goBack}>{`<`}</Button>
+			<Button onClick={goNext}>{`>`}</Button>
 		</div>
 	);
 };
