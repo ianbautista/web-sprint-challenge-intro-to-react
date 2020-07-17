@@ -31,6 +31,11 @@ const App = () => {
 	return (
 		<div className="App">
 			<h1 className="Header">Characters</h1>
+			<div>
+				{pokemon.map((char) => {
+					return <Character name={char.name} />;
+				})}
+			</div>
 		</div>
 	);
 };
