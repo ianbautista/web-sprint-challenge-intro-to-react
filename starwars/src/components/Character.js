@@ -1,11 +1,12 @@
 // Write your Character component here
 import React from "react";
+import { PokemonCard } from "../components/styledComponents";
 
 function Character(props) {
 	return (
-		<div>
+		<PokemonCard>
 			<h2>{props.name}</h2>
-		</div>
+		</PokemonCard>
 	);
 }
 
