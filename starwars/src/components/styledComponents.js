@@ -50,7 +50,7 @@ export const PokemonCard = styled.div`
         padding: 0.5rem;
         color: dodgerblue;
     }
-    
+
     &:hover {
 		h2 {
 			display: none;
