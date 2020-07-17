@@ -71,7 +71,7 @@ const App = () => {
 
 	return (
 		<div className="App">
-			<h1 className="Header">Characters</h1>
+			<div className="Header"></div>
 			<div className="cardContainer">
 				{pokemon.map((char) => {
 					return <Character name={char.name} code={pokemonCode(char.url)} />;

@@ -4,6 +4,12 @@
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
+  background-image: url('./images/pokemon_logo.png');
+  background-position: top;
+  background-size: 300px 100px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100px;
 }
 /* write your parent styles in here for your App.js */
 
