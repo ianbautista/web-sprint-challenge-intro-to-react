@@ -58,12 +58,23 @@ const App = () => {
 			});
 	};
 
+	// to get pokemoncode for photos
+	const pokemonCode = (url) => {
+		let code = url.substring(url.length - 4);
+		let number = code.replace(/\D/g, "");
+		// console.log(url);
+		// console.log(url.length - 4);
+		// console.log(number);
+		// console.log(code);
+		return number;
+	};
+
 	return (
 		<div className="App">
 			<h1 className="Header">Characters</h1>
 			<div className="cardContainer">
 				{pokemon.map((char) => {
-					return <Character name={char.name} />;
+					return <Character name={char.name} code={pokemonCode(char.url)} />;
 				})}
 			</div>
 			<button onClick={goBack}>{`<`}</button>
