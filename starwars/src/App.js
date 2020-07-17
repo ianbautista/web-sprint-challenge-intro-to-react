@@ -28,6 +28,36 @@ const App = () => {
 			});
 	}, []);
 
+	// adding buttons to get all pokemons
+
+	const goBack = (event) => {
+		event.preventDefault();
+		axios
+			.get(previous)
+			.then((response) => {
+				setPokemon(response.data.results);
+				setPrevious(response.data.previous);
+				setNext(response.data.next);
+			})
+			.catch((error) => {
+				console.log(`Oops!! Team Rocket is here! Causing ${error}`);
+			});
+	};
+
+	const goNext = (event) => {
+		event.preventDefault();
+		axios
+			.get(next)
+			.then((response) => {
+				setPokemon(response.data.results);
+				setPrevious(response.data.previous);
+				setNext(response.data.next);
+			})
+			.catch((error) => {
+				console.log(`Oops!! Team Rocket is here! Causing ${error}`);
+			});
+	};
+
 	return (
 		<div className="App">
 			<h1 className="Header">Characters</h1>
@@ -36,6 +66,8 @@ const App = () => {
 					return <Character name={char.name} />;
 				})}
 			</div>
+			<button onClick={goBack}>{`<`}</button>
+			<button onClick={goNext}>{`>`}</button>
 		</div>
 	);
 };
