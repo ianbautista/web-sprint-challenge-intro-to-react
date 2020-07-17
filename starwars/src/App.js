@@ -73,13 +73,15 @@ const App = () => {
 	return (
 		<div className="App">
 			<div className="Header"></div>
-			<div className="cardContainer">
-				{pokemon.map((char) => {
-					return <Character name={char.name} code={pokemonCode(char.url)} />;
-				})}
+			<div className="container">
+				<Button onClick={goBack}>{`<`}</Button>
+				<div className="cardContainer">
+					{pokemon.map((char) => {
+						return <Character name={char.name} code={pokemonCode(char.url)} />;
+					})}
+				</div>
+				<Button onClick={goNext}>{`>`}</Button>
 			</div>
-			<Button onClick={goBack}>{`<`}</Button>
-			<Button onClick={goNext}>{`>`}</Button>
 		</div>
 	);
 };
